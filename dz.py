@@ -2,5 +2,20 @@
 day_test = int(input('Введите число от 1 до 7 '))
 if day_test==6 or day_test==7:
         print ('Это выходной')
-else:
+elif day_test>1 and day_test<6:
         print ('Это не выходной')
+else:
+        print('Вы ввели неверное число')
+#Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0
+# и выдаёт номер четверти плоскости, в которой находится эта точка (или на какой оси она находится)
+
+x_coordinate = int(input('Введите координату Х, неравную 0 '))
+y_coordinate = int(input('Введите координату Y, неравную 0 '))
+if x_coordinate>0 and y_coordinate>0:
+    print('Это первая четверть')
+elif x_coordinate<0 and y_coordinate>0:
+    print('Это вторая четверть')
+elif x_coordinate>0 and y_coordinate<0:
+    print('Это четвертая четверть')
+else:
+    print('Это третья четверть')
