@@ -2,7 +2,7 @@
 day_test = int(input('Введите число от 1 до 7 '))
 if day_test==6 or day_test==7:
         print ('Это выходной')
-elif day_test>1 and day_test<6:
+elif day_test>=1 and day_test<6:
         print ('Это не выходной')
 else:
         print('Вы ввели неверное число')
@@ -17,5 +17,21 @@ elif x_coordinate<0 and y_coordinate>0:
     print('Это вторая четверть')
 elif x_coordinate>0 and y_coordinate<0:
     print('Это четвертая четверть')
-else:
+elif x_coordinate<0 and y_coordinate<0:
     print('Это третья четверть')
+else:
+    print('координаты не равны нулю по условию')
+#Напишите программу, которая по заданному номеру четверти, 
+# показывает диапазон возможных координат точек в этой четверти (x и y).
+
+nomer_chetverti = int(input('Введите номер четверти от 1 до 4 '))
+if nomer_chetverti == 1:
+    print('Х и Y координаты положительные числа')
+elif nomer_chetverti == 2:
+    print('Х координата отрицательное, Y координата положительное числа')
+elif nomer_chetverti == 3:
+    print('Х и Y координаты отрицательные числа')
+elif nomer_chetverti == 4:
+    print('Х координата положительное, Y координата отрицательное число')
+else:
+    print('Вы ввели некорректные данные')
