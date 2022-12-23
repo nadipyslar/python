@@ -39,13 +39,31 @@
 
 #Задайте список из нескольких чисел. 
 # Напишите программу, которая найдёт сумму элементов списка, стоящих на позиции с нечетным индексом
+
+#import random
+#my_list=[]
+#for i in range(int(input('Введите количество элементов списка: '))):
+#    my_list.append(random.randint(0,100))
+#print(my_list)
+#sum=0
+#for i in range(len(my_list)):
+#    if i%2:
+#        sum+=my_list[i]
+#print(f'Сумма элементов списка с нечетными индексами равна {sum}')
+
+#Напишите программу, которая найдёт произведение пар чисел списка.
+# Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 import random
 my_list=[]
 for i in range(int(input('Введите количество элементов списка: '))):
     my_list.append(random.randint(0,100))
 print(my_list)
-sum=0
-for i in range(len(my_list)):
-    if i%2:
-        sum+=my_list[i]
-print(f'Сумма элементов списка с нечетными индексами равна {sum}')
+dlina = len(my_list)
+if dlina%2:
+    middle=dlina//2+1
+else:
+    middle=dlina//2
+my_mult=[]
+for i in range (middle):
+    my_mult.append(my_list[i]*my_list[-1-i])
+print(my_mult)
