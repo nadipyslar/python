@@ -25,14 +25,27 @@
 #Реализуйте алгоритм перемешивания списка. 
 #НЕ ИСПОЛЬЗОВАТЬ ВСТРОЕННЫЕ БИБЛИОТЕКИ SHUFFLE, максимум использование библиотеки Random для и получения случайного int
 
+#import random
+#my_list=[]
+#for i in range(10):
+#    my_list.append(random.randint(0,100))
+#print (my_list)
+#temporary=0
+#for i in range(9):
+#    temporary=my_list[i]
+#    my_list[i]=my_list[i+1]
+#    my_list[i+1]=temporary
+#print(my_list)
+
+#Задайте список из нескольких чисел. 
+# Напишите программу, которая найдёт сумму элементов списка, стоящих на позиции с нечетным индексом
 import random
 my_list=[]
-for i in range(10):
+for i in range(int(input('Введите количество элементов списка: '))):
     my_list.append(random.randint(0,100))
-print (my_list)
-temporary=0
-for i in range(9):
-    temporary=my_list[i]
-    my_list[i]=my_list[i+1]
-    my_list[i+1]=temporary
 print(my_list)
+sum=0
+for i in range(len(my_list)):
+    if i%2:
+        sum+=my_list[i]
+print(f'Сумма элементов списка с нечетными индексами равна {sum}')
