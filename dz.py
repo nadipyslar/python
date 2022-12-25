@@ -69,23 +69,32 @@
 #print(my_mult)
 #Задайте список из вещественных чисел. 
 # Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов, отличной от 0.
-import random
-my_list=[]
-for i in range(int(input('Введите количество элементов списка: '))):
-    my_list.append(random.uniform(0,100))
-print(my_list)
-my_int_list=[int(x) for x in my_list]
-print(my_int_list)
-float_part=[]
-temp=0
-while len(my_list)!=temp:
-    z=my_list[temp]-my_int_list[temp]
-    temp=temp+1
-    float_part.append(z)
-print(float_part)
-for i in range(len(float_part)):
-    if float_part[i]==0:
-        float_part.remove(a[i])
-print(float_part)
-diff=max(float_part)-min(float_part)
-print(f'Разница между максимальной и минимальной дробной частью составляет {diff}')
+#import random
+#my_list=[]
+#for i in range(int(input('Введите количество элементов списка: '))):
+#    my_list.append(random.uniform(0,100))
+#print(my_list)
+#my_int_list=[int(x) for x in my_list]
+#print(my_int_list)
+#float_part=[]
+#temp=0
+#while len(my_list)!=temp:
+#    z=my_list[temp]-my_int_list[temp]
+#    temp=temp+1
+#    float_part.append(z)
+#print(float_part)
+#for i in range(len(float_part)):
+#    if float_part[i]==0:
+#        float_part.remove(a[i])
+#print(float_part)
+#diff=max(float_part)-min(float_part)
+#print(f'Разница между максимальной и минимальной дробной частью составляет {diff}')
+
+#Напишите программу, которая будет преобразовывать десятичное число в двоичное
+my_number = int(input('Введите число в десятичной системе исчисления: '))
+result = []
+while my_number:
+    result.append(my_number%2)
+    my_number //= 2
+result.reverse()
+print(*result)
