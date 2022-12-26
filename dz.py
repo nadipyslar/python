@@ -91,10 +91,31 @@
 #print(f'Разница между максимальной и минимальной дробной частью составляет {diff}')
 
 #Напишите программу, которая будет преобразовывать десятичное число в двоичное
-my_number = int(input('Введите число в десятичной системе исчисления: '))
-result = []
-while my_number:
-    result.append(my_number%2)
-    my_number //= 2
-result.reverse()
-print(*result)
+#my_number = int(input('Введите число в десятичной системе исчисления: '))
+#result = []
+#while my_number:
+#    result.append(my_number%2)
+#    my_number //= 2
+#result.reverse()
+#print(*result)
+
+#Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов
+n=8
+def fibonacci(n):
+    if n in (1, 2):
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2) 
+def negafib(n):
+    if n in (1, 2):
+        return -1
+    else:
+        return -fibonacci(n - 1) - fibonacci(n - 2) 
+list =[]
+for e in range (1,8):
+    list.append(negafib(e))
+print(list)
+list_pos =[]
+for e in range (1,8):
+    list_pos.append(fibonacci(e))
+print(list_pos)
