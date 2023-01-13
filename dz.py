@@ -100,22 +100,40 @@
 #print(*result)
 
 #Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов
-n=8
-def fibonacci(n):
-    if n in (1, 2):
-        return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2) 
-def negafib(n):
-    if n in (1, 2):
-        return -1
-    else:
-        return -fibonacci(n - 1) - fibonacci(n - 2) 
-list =[]
-for e in range (1,8):
-    list.append(negafib(e))
-print(list)
-list_pos =[]
-for e in range (1,8):
-    list_pos.append(fibonacci(e))
-print(list_pos)
+#n=8
+#def fibonacci(n):
+#    if n in (1, 2):
+#        return 1
+#    else:
+#        return fibonacci(n - 1) + fibonacci(n - 2) 
+#def negafib(n):
+#    if n in (1, 2):
+#        return -1
+#    else:
+#        return -fibonacci(n - 1) - fibonacci(n - 2) 
+#list =[]
+#for e in range (1,8):
+#    list.append(negafib(e))
+#print(list)
+#list_pos =[]
+#for e in range (1,8):
+#    list_pos.append(fibonacci(e))
+#print(list_pos)
+
+import random
+def create_eq():
+    equation={}
+    n=int(input("Введите число n: "))
+    for i in range (n, -1, -1):
+        if i == n:
+            while True:
+                koef = random.randit(0,100)
+                if koef!=0:
+                    break
+                else:
+                    print ("contains zero") 
+            equation [i]=koef
+        else:
+            equation[i]=random.randint(0,100)
+    return equation
+    print(create_eq())
