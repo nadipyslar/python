@@ -48,21 +48,29 @@
 #    print('Победил второй герой')
 
 
-import random
-whos_turn=random.randint(1,2)
-sum = random.randint(50,100)
-print(f'На столе лежит {sum} конфет')
-while sum in range (28,100):
-    if whos_turn ==1:
-        first_player=int(input('Первый игрок, сколько конфет от 1 до 28 ты возьмешь?'))
-        whos_turn=whos_turn+1
-        sum=sum-first_player    
-    else:
-        bot=random.randint(1,28)
-        print(f'Бот взял {bot} конфет')
-        whos_turn=whos_turn-1
-        sum=sum-bot
-if whos_turn==1:
-    print('Победил первый герой')
-else:
-    print('Победил бот')
+#import random
+#whos_turn=random.randint(1,2)
+#sum = random.randint(50,100)
+#print(f'На столе лежит {sum} конфет')
+#while sum in range (28,100):
+#    if whos_turn ==1:
+#        first_player=int(input('Первый игрок, сколько конфет от 1 до 28 ты возьмешь?'))
+#        whos_turn=whos_turn+1
+#        sum=sum-first_player    
+#    else:
+#        bot=random.randint(1,28)
+#        print(f'Бот взял {bot} конфет')
+#        whos_turn=whos_turn-1
+#        sum=sum-bot
+#if whos_turn==1:
+#    print('Победил первый герой')
+#else:
+#    print('Победил бот')
+
+field=list(range(10))
+def fill_field(field):
+    print ('-------------')
+    for i in range(3):
+        print ('|', field[0+i*3], "|", field[1+i*3], "|", field[2+i*3], "|")
+        print ('-------------')
+print(fill_field(field))
