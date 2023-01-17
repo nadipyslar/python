@@ -67,10 +67,11 @@
 #else:
 #    print('Победил бот')
 
-field=list(range(10))
-def fill_field(field):
-    print ('-------------')
-    for i in range(3):
+field=list(range(10)
+print ('-------------')
+for i in range(3):
         print ('|', field[0+i*3], "|", field[1+i*3], "|", field[2+i*3], "|")
         print ('-------------')
 print(fill_field(field))
+import random
+whos_turn=random.randint(1,2)
