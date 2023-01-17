@@ -120,20 +120,35 @@
 #    list_pos.append(fibonacci(e))
 #print(list_pos)
 
+#import random
+#def create_eq():
+#    equation={}
+#    n=int(input("Введите число n: "))
+#    for i in range (n, -1, -1):
+#        if i == n:
+#            while True:
+#                koef = random.randint(0,100)
+#                if koef!=0:
+#                    break
+#                else:
+#                    print ("contains zero") 
+#            equation [i]=koef
+#        else:
+#            equation[i]=random.randint(0,100)
+#    return equation
+#print(create_eq())
+
+#data = list (map(int, input().split()))
+
+#new_str = '1,3,4,5,6'
+#data = list(map(int, new_str.split(',')))
+#for i in range(1,len(data)):
+#    if data[i]!=data[i-1]+1:
+#        print (data[i]-1)
+#        break
+#    else:
+#        print("все числа по порядку")
+
 import random
-def create_eq():
-    equation={}
-    n=int(input("Введите число n: "))
-    for i in range (n, -1, -1):
-        if i == n:
-            while True:
-                koef = random.randit(0,100)
-                if koef!=0:
-                    break
-                else:
-                    print ("contains zero") 
-            equation [i]=koef
-        else:
-            equation[i]=random.randint(0,100)
-    return equation
-    print(create_eq())
+list = [random.randint(0,10) for i in range (10)]
+print (list)

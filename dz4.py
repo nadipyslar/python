@@ -8,7 +8,7 @@ def create_eq():
     for i in range (n, -1, -1):
         if i == n:
             while True:
-                koef = random.randit(0,100)
+                koef = random.randint(0,100)
                 if koef!=0:
                     break
                 else:
@@ -17,7 +17,17 @@ def create_eq():
         else:
             equation[i]=random.randint(0,100)
     return equation
-    print(create_eq())
+my_dict= (create_eq())
+print (my_dict)
+def reserve (d):
+    return {v: k for k, v in d.items()}
+my_dict_reversed= reserve(my_dict)
+print(my_dict_reversed)
 
-
+#{5: 43, 4: 67, 3: 34, 2: 34, 1: 36, 0: 6}
+#43X**5
+string = ', '.join(f'{k} {v}' for k,v in my_dict_reversed.items())
+print (string)
+polymonial = string.replace(', ', '+').replace(' ','*x**')
+print (polymonial)
 
